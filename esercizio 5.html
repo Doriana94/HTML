@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>The form registration</h1>
+    <form action="save_datas.php" method="POST">
+      <!-- Name and Lastname -->
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Mario" required />
+        <label for="lastname">Lastname:</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          placeholder="Rossi"
+          required
+        />
+      </div>
+      <!-- Date of Birth -->
+      <div>
+        <br />
+        <label for="dob">Date of Birth:</label>
+        <input type="date" required />
+      </div>
+      <!-- Telephone number -->
+      <div>
+        <br />
+        <label for="phone">Telephone number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="3416573820"
+          required
+        />
+      </div>
+      <!-- Email -->
+      <div>
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="mariorossi@virgilio.it"
+          required
+        />
+      </div>
+      <!-- Password -->
+      <div>
+        <br />
+        <label for="password">Password (16 characters maximum):</label>
+        <input type="password" />
+      </div>
+      <!-- A select for choosing plans: free plan, a group of 3 plans with increasing price, and a checkbox for a Pro Plan -->
+      <div>
+        <br />
+        <label for="plans">Plans:</label>
+        <select id="free plan" name="plan">
+          <option value="0">Free</option>
+          <optgroup label="monthly">
+            <option value="1">30.00€/month</option>
+            <option value="2">40.00€/month</option>
+            <option value="3">50.00€/month</option>
+          </optgroup>
+        </select>
+        <label for="proplan">PRO plan</label>
+        <input type="checkbox" id="proplan" name="proplan" />
+      </div>
+      <!-- Credit card number -->
+      <div>
+        <br />
+        <label for="card number">Credit card number</label>
+        <input
+          type="text"
+          inputmode="numeric"
+          id="card number"
+          name="card number"
+          placeholder="1111-2222-3333-4444"
+          required
+        />
+        <!-- CVC -->
+        <label for="security code">CVC</label>
+        <input
+          type="text"
+          id="security code"
+          name="security code"
+          placeholder="333 (3 numbers)"
+          required
+        />
+        <!-- Expiration date -->
+        <label for="ed">Expiration date</label>
+        <input
+          type="text"
+          id="ed"
+          name="ed"
+          placeholder="Scadenza MM/AA"
+          required
+        />
+        <!-- Billing Address -->
+        <label for="adr">Address:</label>
+        <input
+          type="text"
+          id="adr"
+          name="address"
+          placeholder="Via Roma n.7"
+          required
+        />
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" placeholder="Roma" required />
+        <label for="zip">Zip</label>
+        <input type="text" id="zip" name="zip" placeholder="00053" required />
+        <label for="province">Province</label>
+        <input
+          type="text"
+          id="province"
+          name="province"
+          placeholder="(RM)"
+          required
+        />
+      </div>
+    </form>
+  </body>
+</html>
